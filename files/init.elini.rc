@@ -158,8 +158,8 @@ on property:init.svc.hcid=running
 #    disabled
 #    oneshot
 
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
-    --baudrate 4000000 --patchram /etc/firmware/BCM4325D1_004.002.004.0262.0279.hcd
+service hciattach /system/bin/brcm_patchram_plus --enable_hci \
+    --baudrate 4000000 --patchram /system/etc/firmware/BCM4325D1_004.002.004.0262.0279.hcd /dev/ttyHS0
     user bluetooth
     group bluetooth net_bt_admin
     disabled
@@ -174,13 +174,13 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
 #    disabled			
 #    oneshot			
 				
-service bluetoothd /system/bin/bluetoothd -n			
-    socket bluetooth stream 660 bluetooth bluetooth			
-    socket dbus_bluetooth stream 660 bluetooth bluetooth			
-    # init.rc does not yet support applying capabilities, so run as root and			
-    # let bluetoothd drop uid to bluetooth with the right linux capabilities			
-    group bluetooth net_bt_admin misc			
-    disabled			
+#service bluetoothd /system/bin/bluetoothd -n			
+#    socket bluetooth stream 660 bluetooth bluetooth			
+#    socket dbus_bluetooth stream 660 bluetooth bluetooth			
+#    # init.rc does not yet support applying capabilities, so run as root and			
+#    # let bluetoothd drop uid to bluetooth with the right linux capabilities			
+#    group bluetooth net_bt_admin misc			
+#    disabled			
 
 #service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
 #    user bluetooth

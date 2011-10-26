@@ -56,8 +56,8 @@ PRODUCT_COPY_FILES += \
 
 #BT init
 #FIXME: BT init workaround
-PRODUCT_COPY_FILES += \
-    device/lge/elini/files/etc/init.d/30initbt:system/etc/init.d/30initbt \
+#PRODUCT_COPY_FILES += \
+#    device/lge/elini/files/etc/init.d/30initbt:system/etc/init.d/30initbt \
 
 # VPN
 PRODUCT_COPY_FILES += \
@@ -66,6 +66,10 @@ PRODUCT_COPY_FILES += \
 # Camera (from thunderg)
 PRODUCT_COPY_FILES += \
     device/lge/elini/prebuilt/liboemcamera.so:system/lib/liboemcamera.so \
+
+# BT (from thunderg)
+PRODUCT_COPY_FILES += \
+    device/lge/elini/prebuilt/brcm_patchram_plus:system/bin/brcm_patchram_plus \
 
 # Wifi
 PRODUCT_COPY_FILES += \
