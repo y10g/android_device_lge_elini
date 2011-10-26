@@ -134,7 +134,7 @@ adb pull /system/lib/libOmxCore.so ../../../vendor/$MANUFACTURER/$DEVICE/proprie
 adb pull /system/lib/libqcomm_omx.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
 # Bluetooth
-adb pull /system/bin/BCM4325D1_004.002.004.0262.0279.hcd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/bin/BCM4325D1_004.002.004.0262.0279.hcd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/etc/firmware
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2011 The CyanogenMod Project
@@ -180,9 +180,9 @@ PRODUCT_COPY_FILES += \\
 
 # Camera
 PRODUCT_COPY_FILES += \\
-#    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmmipl.so:system/lib/libmmipl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so \\
+#    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \\
 
 # Wifi
 PRODUCT_COPY_FILES += \\
@@ -281,7 +281,7 @@ PRODUCT_COPY_FILES += \\
 
 # Bluetooth
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/BCM4325D1_004.002.004.0262.0279.hcd:system/bin/BCM4325D1_004.002.004.0262.0279.hcd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/firmware/BCM4325D1_004.002.004.0262.0279.hcd:system/etc/firmware/BCM4325D1_004.002.004.0262.0279.hcd \\
 
 EOF
 

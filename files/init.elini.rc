@@ -117,6 +117,7 @@ on boot
     mkdir /data/misc/dhcp 0777 system system
 # LGE_CHANGE_E, [jisung.yang@lge.com] 2010-04-24, <make wifi directory> 
 
+
 # +++ BRCM +++
 # Make sure the property critical to Bluetooth functionality to be reserved by creating while booting up.
     setprop service.brcm.bt.srv_active 0
