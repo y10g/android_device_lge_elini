@@ -86,6 +86,7 @@ PRODUCT_COPY_FILES += \
     device/lge/elini/files/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/lge/elini/files/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/lge/elini/files/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    device/lge/elini/files/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
 
 # Device permissions
 PRODUCT_COPY_FILES += \
